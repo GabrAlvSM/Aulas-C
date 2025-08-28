@@ -1,15 +1,12 @@
 #include <stdio.h>
 
-int pot(int base, int exp){
+float pot(int base, int exp){
 
 	if(exp == 0){
 		return 1;
 	}
 	else if (exp < 0) {
-        exp = exp*(-1);
-        // base = (1/base);
-        
-        return (1 / (float)(base * pot(base, exp-1))); 
+        return (1 / pot(base, (exp * -1)));
 	}
 	else{ 
 		return (base * pot(base, exp-1)); 
@@ -17,22 +14,24 @@ int pot(int base, int exp){
 }
 
 int main(){
-	int x;
-	int y = 1;
+	int b, x;
+    int loop = 1;
+    float res;
 
-    while (y > 0){
+    while (loop == 1){
         printf("Informe o valor da BASE: ");
-        scanf("%d",&y);
+        scanf("%d",&b);
         
         printf("Informe o valor do EXPOENTE: ");
         scanf("%d",&x);
-        
-        float res = pot(y,x);
-        printf("Calculo: %d^%d \nResposta: %f\n\n", y, x, res);
+
+        res = pot(b,x);
+        printf("Calculo: %d^%d \nResposta: %f\n\n", b, x, res);
 
         printf("---------------------------------\n");
         printf("1 para continuar ou 0 para sair: ");
-        scanf("%d",&y);
+        scanf("%d",&loop);
     }
+
 	return 0;
 }

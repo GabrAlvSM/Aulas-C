@@ -1,0 +1,21 @@
+Usando n1 como 10 por padrão, os códigos a e b tiveram como saída:
+
+Saída de a: 
+10 9 8 7 6 5 4 3 2 1 zero
+
+Saída de b: 
+zero 1 2 3 4 5 6 7 8 9 10
+
+Tendo em vista que a diferença no código de a para b se aplica em:
+
+a: 
+    printf("%d ", n);
+    f3(n-1);
+
+b:
+    f3(n-1);
+    printf("%d ", n);
+
+O exemplo 'a' demonstra que o valor de n é impresso antes da utilização da recursividade, portanto, para o valor ser impresso, não depende do resultado retornado pela função, sendo exibido assim que a linha de código é executada. Posteriormente o valor é subraído e o ciclo continua até chegarmos em 'zero';
+
+Enquando em 'b', a função será executada antes da 'impressão', sendo assim, essa impressão só ocorrerá após todas as funções recursivas terem sido executadas e o valor chegue a 'zero', trazendo a execução de 'printf("zero ");', assim fechando o ciclo da função e executando a linha de 'printf("%d ", n);'. Sendo assim, a contagem se faz passar por progressiva ou crescente.
