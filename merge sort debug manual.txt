@@ -1,0 +1,54 @@
+vetor = [6, 3, 9, 1, 5, 2, 7, 4, 8]
+
+mergeSort(vetor, 0, 9){
+
+    esq = 0
+    dir = 9
+
+    meio = (0 + 9)/2
+    meio = 4.5 int -> 4
+}
+
+mergeSort ([6,3,9,1,5], 0, 4){
+    esq = 0
+    dir = 5
+
+    meio = 2
+    mergeSort([6,3,9], 0, 2){
+        esq = 0
+        dir = 2
+
+        meio = 1
+
+        mergeSort([6,3], 0 , 1){
+            esq = 0
+            dir = 1
+
+            meio = 0
+
+            mergeSort([6], 0, 0){
+                return
+            }
+
+            mergeSort([3], 1, 0){
+                return
+            }
+
+            merge([6,3], 0, 1, 2){
+                aux = 3
+                for ( i = 0; i<= 2; i++){
+                    aux[] = v[] = [6, 3]
+                }
+
+                i = 0
+                j = 2
+                k = 0
+            }
+
+        }
+    }
+
+}
+mergeSort([2,7,4,8], 5, 9)
+merge(vetor, 0, 4, 9)
+
